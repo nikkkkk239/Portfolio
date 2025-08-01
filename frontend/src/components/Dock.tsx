@@ -91,7 +91,7 @@ function DockItem({
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
       onClick={onClick}
-      className={`relative inline-flex items-center justify-center rounded-full bg-[#060010] border-neutral-700 border-2 shadow-md ${className}`}
+      className={`relative cursor-pointer inline-flex items-center justify-center rounded-full bg-[#060010] border-neutral-700 border-2 shadow-md ${className}`}
       tabIndex={0}
       role="button"
       aria-haspopup="true"
@@ -116,6 +116,8 @@ function DockLabel({ children, className = "", ...rest }: DockLabelProps) {
     return () => unsubscribe();
   }, [isHovered]);
 
+  
+
   return (
     <AnimatePresence>
       {isVisible && (
@@ -124,7 +126,8 @@ function DockLabel({ children, className = "", ...rest }: DockLabelProps) {
           animate={{ opacity: 1, y: -10 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.2 }}
-          className={`${className} absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-neutral-700 bg-[#060010] px-2 py-0.5 text-xs text-white`}
+
+          className={`${className} absolute  -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-neutral-700 bg-[#060010] px-2 py-0.5 text-xs text-white`}
           role="tooltip"
           style={{ x: "-50%" }}
         >
@@ -142,7 +145,7 @@ type DockIconProps = {
 
 function DockIcon({ children, className = "" }: DockIconProps) {
   return (
-    <div className={`flex items-center justify-center ${className}`}>
+    <div className={`flex text-white items-center justify-center ${className}`}>
       {children}
     </div>
   );
@@ -160,6 +163,18 @@ export default function Dock({
 }: DockProps) {
   const mouseX = useMotionValue(Infinity);
   const isHovered = useMotionValue(0);
+  const [display, setDisplay] = useState(false);
+
+
+  useEffect(()=>{
+    const scrollEffect = ()=>{
+      const currentScroll = window.scrollY;
+      setDisplay(currentScroll > 150);
+    }
+    window.addEventListener("scroll" , scrollEffect);
+    return ()=> window.addEventListener("scroll" , scrollEffect);
+
+  },[])
 
   const maxHeight = useMemo(
     () => Math.max(dockHeight, magnification + magnification / 2 + 4),
@@ -182,7 +197,7 @@ export default function Dock({
           isHovered.set(0);
           mouseX.set(Infinity);
         }}
-        className={`${className} absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-2xl border-neutral-700 border-2 pb-2 px-4`}
+        className={`${className} fixed bottom-15 ${display ? "translate-y-0" : "translate-y-[2000px]"} left-1/2 transform  flex items-end w-fit gap-4 -translate-x-1/2 rounded-2xl border-neutral-700 duration-500 transition-all border-2 pb-2 px-4`}
         style={{ height: panelHeight }}
         role="toolbar"
         aria-label="Application dock"
@@ -198,7 +213,7 @@ export default function Dock({
             magnification={magnification}
             baseItemSize={baseItemSize}
           >
-            <DockIcon>{item.icon}</DockIcon>
+            <DockIcon >{item.icon}</DockIcon>
             <DockLabel>{item.label}</DockLabel>
           </DockItem>
         ))}

@@ -3,13 +3,15 @@ import Navbar from './components/Navbar';
 import './App.css'
 import Particles from './components/Dot';
 import Dock from './components/Dock';
-import { VscHome,VscArchive,VscAccount , VscSettingsGear } from 'react-icons/vsc';
+import { VscHome,VscArchive,VscAccount , VscSettingsGear, VscArrowCircleUp, VscArrowUp, VscMail } from 'react-icons/vsc';
 
   const items = [
-    { icon: <VscHome size={18} />, label: 'Home', onClick: () => alert('Home!') },
-    { icon: <VscArchive size={18} />, label: 'Archive', onClick: () => alert('Archive!') },
-    { icon: <VscAccount size={18} />, label: 'Profile', onClick: () => alert('Profile!') },
-    { icon: <VscSettingsGear size={18} />, label: 'Settings', onClick: () => alert('Settings!') },
+    { icon: <VscAccount size={18} />, label: 'About', onClick: () => alert('About Me!') },
+    { icon: <VscHome size={18} />, label: 'Skills', onClick: () => alert('Skills!') },
+
+    { icon: <VscMail size={18} />, label: 'Contact', onClick: () => alert('Contact!') },
+    
+    { icon: <VscArrowUp size={18} />, label: 'Back To Top', onClick: () => window.scrollTo({top:0 , behavior:"smooth"}) },
   ];
 
 
@@ -38,8 +40,9 @@ function App() {
     magnification={70}
     
   />
-        <div className='h-[100vh] w-full'></div>
+        
       </div>
+      <div className='h-[100vh] bg-black w-full'></div>
     </div>
   )
 }
