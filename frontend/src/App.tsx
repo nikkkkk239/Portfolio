@@ -1,28 +1,25 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import './App.css'
 import Particles from './components/Dot';
 import Dock from './components/Dock';
-import { VscHome,VscArchive,VscAccount , VscSettingsGear, VscArrowCircleUp, VscArrowUp, VscMail } from 'react-icons/vsc';
+import { VscHome,VscAccount , VscArrowUp, VscMail } from 'react-icons/vsc';
 
   const items = [
     { icon: <VscAccount size={18} />, label: 'About', onClick: () => alert('About Me!') },
     { icon: <VscHome size={18} />, label: 'Skills', onClick: () => alert('Skills!') },
-
     { icon: <VscMail size={18} />, label: 'Contact', onClick: () => alert('Contact!') },
-    
     { icon: <VscArrowUp size={18} />, label: 'Back To Top', onClick: () => window.scrollTo({top:0 , behavior:"smooth"}) },
   ];
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className='relative w-[100vw]'>
+    <div className='relative min-h-screen w-[100vw] h-full'>
        <Navbar/>
-      <div style={{ width: '100%',backgroundColor : 'black', height: '100vh', position: 'relative' }}>
-       
+       <div className='fixed inset-0 -z-10'>
         <Particles
           particleColors={['#ffffff', '#ffffff']}
           particleCount={200}
@@ -33,17 +30,30 @@ function App() {
           alphaParticles={false}
           disableRotation={false}
         />
+       </div>
+       
+      {/* <div style={{ width: '100%',backgroundColor : 'black', height: '100vh', position: 'relative' }}> */}
         <Dock 
-    items={items}
-    panelHeight={68}
-    baseItemSize={50}
-    magnification={70}
-    
-  />
-        
+          items={items}
+          panelHeight={68}
+          baseItemSize={50}
+          magnification={70}
+        />
+      {/* </div> */}
+      <div className='w-full mt-30'>
+          <div className='bg-white/5 md:w-full w-full rounded-xl md:max-w-[950px] px-10 my-auto backdrop-blur-[8px] flex py-10 justify-between gap-3 mx-auto '>
+            <Hero/>
+          </div>
       </div>
-      <div className='h-[100vh] bg-black w-full'></div>
-    </div>
+      
+
+      
+      
+      
+
+  </div>
+
+
   )
 }
 

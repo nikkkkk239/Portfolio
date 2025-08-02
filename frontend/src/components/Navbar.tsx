@@ -48,7 +48,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="fixed w-full mt-9 z-10 px-4 md:px-6 text-white">
+    <div className="fixed w-full mt-9 z-10 px-4 md:px-6  text-white">
       <div className={`max-w-[500px] w-full md:max-w-[900px] ${!showNavbar && "translate-y-[-300px]"} mx-auto py-4 backdrop-blur-lg bg-white/5 relative rounded-full flex justify-between transition-all duration-300 whiteShadow items-center px-6`}>
 
         <div className={`absolute transform 
@@ -71,7 +71,7 @@ const Navbar = () => {
 
         
         <div className={`absolute hover:scale-120 hover:font-bold  md:hidden text-white transition-all duration-100 left-1/2 transform bottom-0 cursor-pointer text-xl' title='More Options ${menuShown && "rotate-180"}`} onClick={()=>handleOptionsClick()} title='More Options'><HiChevronDown/></div>
-        <div className="font-medium  text-xl">Nikhil Panday</div>
+        <div className="font-medium MuseoModerno text-2xl" title='Nikhil Panday'>NP</div>
 
         {/* UL container with ref */}
         <ul
