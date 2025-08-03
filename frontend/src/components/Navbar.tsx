@@ -27,6 +27,13 @@ const Navbar = () => {
       left : 0 , width : 0
     })
   }
+
+  window.addEventListener("scroll",()=>{
+    if(menuShown){
+      setMenuShown(false);
+    }
+  })
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
@@ -49,7 +56,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed w-full mt-9 z-10 px-4 md:px-6  text-white">
-      <div className={`max-w-[500px] w-full md:max-w-[900px] ${!showNavbar && "translate-y-[-300px]"} mx-auto py-4 backdrop-blur-lg bg-white/5 relative rounded-full flex justify-between transition-all duration-300 whiteShadow items-center px-6`}>
+      <div className={`max-w-[500px] entry_animation w-full md:max-w-[900px] ${!showNavbar && "translate-y-[-300px]"} mx-auto py-4 backdrop-blur-lg bg-white/5 relative rounded-full flex justify-between transition-all duration-300 whiteShadow items-center px-6`}>
 
         <div className={`absolute transform 
           ${menuShown ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"} 

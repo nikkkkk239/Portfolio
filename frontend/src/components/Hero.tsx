@@ -13,13 +13,13 @@ const Hero = () => {
     <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 px-4 py-8">
       {/* Text Section */}
       <div className="flex flex-col text-center md:text-left gap-4 md:max-w-[60%]">
-        <h1 className="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-white entry_animation font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           Hi, I'm Nikhil 👋🏼
         </h1>
-        <p className="text-white text-base sm:text-lg md:text-xl">
+        <p className="text-white entry_animation text-base sm:text-lg md:text-xl">
           Software Engineer. I love building things and helping people. Very active on LinkedIn.
         </p>
-        <div className='flex gap-4 w-full items-center justify-center md:justify-start'>
+        <div className='flex entry_animation gap-4 w-full items-center justify-center md:justify-start'>
           <a  href="https://www.linkedin.com/in/nikhil-panday-39776b284/" target='blank'><LiaLinkedin className='text-white text-3xl hover:-translate-y-2 cursor-pointer transition-all' title='LinkedIn' /></a>
 
           
@@ -28,7 +28,8 @@ const Hero = () => {
           <a href="https://www.instagram.com/nikkkkk_239/" target='blank'><LiaInstagram className='text-white text-3xl hover:-translate-y-2 cursor-pointer transition-all' title='Instagram' /></a>        
 
         </div>
-        <StarBorder
+        <a href="resume.pdf" className='entry_animation'>
+          <StarBorder
           as="button"
           className="w-fit cursor-pointer md:mx-0 mx-auto bg-black hover:scale-105 duration-150"
           color="white"
@@ -36,6 +37,8 @@ const Hero = () => {
         >
           Download CV
         </StarBorder>
+        </a>
+        
       </div>
 
       {/* Image Section */}
