@@ -7,6 +7,7 @@ import Dock from './components/Dock';
 import About from './components/About';
 import { VscHome,VscAccount , VscArrowUp, VscMail } from 'react-icons/vsc';
 import WorkExperience from './components/WorkExperience';
+import Education from './components/Education';
 
   const items = [
     { icon: <VscAccount size={18} />, label: 'About', onClick: () => alert('About Me!') },
@@ -47,6 +48,7 @@ function App() {
             <Hero/>
             <About/>
             <WorkExperience/>
+            <Education/>
           </div>
       </div>
       

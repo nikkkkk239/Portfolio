@@ -11,7 +11,7 @@ const WorkExperience = () => {
             role : "Full Stack Developer",
             logoPng : "digitalGuruji.png",
             timeLine : "Jan 2025 - Apr 2025",
-            details : "Builded multiple websites related to AI tools which includes Script Generator, Image Background Remover, Study Guide, many more. Used to get tasks to build the complete Web and have worked with figma designs. Also Got knowledge related to AWS backend Server API's. Most of the work was related to Frontend side. Got deeper knowledge of Javascript behaviour."
+            details : "Builded multiple websites related to AI tools which includes Script Generator, Image Background Remover, Study Guide and many more. Used to get tasks to build complete Web and have worked with figma along with it. Also Got knowledge related to AWS backend Server API's. Most of the work was related to Frontend side. Got deeper knowledge of Javascript behaviour."
         },
         
     ]
