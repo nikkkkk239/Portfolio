@@ -8,6 +8,8 @@ import About from './components/About';
 import { VscHome,VscAccount , VscArrowUp, VscMail } from 'react-icons/vsc';
 import WorkExperience from './components/WorkExperience';
 import Education from './components/Education';
+import Skills from './components/Skills';
+
 
   const items = [
     { icon: <VscAccount size={18} />, label: 'About', onClick: () => alert('About Me!') },
@@ -49,6 +51,7 @@ function App() {
             <About/>
             <WorkExperience/>
             <Education/>
+            <Skills/>
           </div>
       </div>
       

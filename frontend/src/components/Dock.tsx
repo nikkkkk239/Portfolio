@@ -48,7 +48,7 @@ type DockItemProps = {
 type DockLabelProps = {
   className?: string;
   children: React.ReactNode;
-   isHovered: MotionValue<number>;
+  isHovered: MotionValue<number>;
 };
 
 function DockItem({
@@ -103,8 +103,6 @@ function DockItem({
   );
 }
 
-
-
 function DockLabel({ children, className = "", ...rest }: DockLabelProps) {
   const { isHovered } = rest as { isHovered: MotionValue<number> };
   const [isVisible, setIsVisible] = useState(false);
@@ -116,8 +114,6 @@ function DockLabel({ children, className = "", ...rest }: DockLabelProps) {
     return () => unsubscribe();
   }, [isHovered]);
 
-  
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -126,8 +122,7 @@ function DockLabel({ children, className = "", ...rest }: DockLabelProps) {
           animate={{ opacity: 1, y: -10 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.2 }}
-
-          className={`${className} absolute  -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-neutral-700 bg-[#060010] px-2 py-0.5 text-xs text-white`}
+          className={`${className} absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-neutral-700 bg-[#060010] px-2 py-0.5 text-xs text-white`}
           role="tooltip"
           style={{ x: "-50%" }}
         >
@@ -137,11 +132,6 @@ function DockLabel({ children, className = "", ...rest }: DockLabelProps) {
     </AnimatePresence>
   );
 }
-
-type DockIconProps = {
-  className?: string;
-  children: React.ReactNode;
-};
 
 function DockIcon({ children, className = "" }: DockIconProps) {
   return (
@@ -165,27 +155,17 @@ export default function Dock({
   const isHovered = useMotionValue(0);
   const [display, setDisplay] = useState(false);
 
-
-  useEffect(()=>{
-    const scrollEffect = ()=>{
+  useEffect(() => {
+    const scrollEffect = () => {
       const currentScroll = window.scrollY;
       setDisplay(currentScroll > 150);
-    }
-    window.addEventListener("scroll" , scrollEffect);
-    return ()=> window.addEventListener("scroll" , scrollEffect);
-
-  },[])
-
-  const maxHeight = useMemo(
-    () => Math.max(dockHeight, magnification + magnification / 2 + 4),
-    [magnification]
-  );
-  const heightRow = useTransform(isHovered, [0, 1], [panelHeight, maxHeight]);
-  const height = useSpring(heightRow, spring);
+    };
+    window.addEventListener("scroll", scrollEffect);
+    return () => window.removeEventListener("scroll", scrollEffect);
+  }, []);
 
   return (
     <motion.div
-      style={{ height, scrollbarWidth: "none" }}
       className="mx-2 flex max-w-full items-center"
     >
       <motion.div
@@ -197,7 +177,9 @@ export default function Dock({
           isHovered.set(0);
           mouseX.set(Infinity);
         }}
-        className={`${className} fixed bottom-16 z-[9999] ${display ? "translate-y-0" : "translate-y-[2000px]"} left-1/2 transform  flex items-end w-fit gap-4 -translate-x-1/2 rounded-2xl border-neutral-700 duration-500 transition-all border-2 bg-black pb-2 px-4`}
+        className={`${className} fixed bottom-16 z-[9999] ${
+          display ? "translate-y-0" : "translate-y-[2000px]"
+        } left-1/2 transform flex items-end w-fit gap-4 -translate-x-1/2 rounded-2xl border-neutral-700 duration-500 transition-all border-2 bg-black pb-2 px-4`}
         style={{ height: panelHeight }}
         role="toolbar"
         aria-label="Application dock"
@@ -213,7 +195,7 @@ export default function Dock({
             magnification={magnification}
             baseItemSize={baseItemSize}
           >
-            <DockIcon >{item.icon}</DockIcon>
+            <DockIcon>{item.icon}</DockIcon>
             <DockLabel>{item.label}</DockLabel>
           </DockItem>
         ))}

@@ -36,3 +36,26 @@
 .entry_animation{
     animation: entry 1.2s ease-out forwards;
 }
+body {
+  overflow-anchor: none;
+}
+
+/* For perspective and 3D effects */
+/* These are for 3D flip effect */
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+

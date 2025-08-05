@@ -24,7 +24,7 @@ const WorkExperience = () => {
         setShowDetails(id);
     }
   return (
-     <div className="flex flex-col w-full text-white items-center md:items-start justify-between gap-6 px-4 py-5">
+     <div className="flex flex-col w-full text-white items-center md:items-start justify-between gap-6 px-4 py-3">
       <h1 className='text-3xl font-medium entry_animation'>Work Experience</h1>
       <div className='flex flex-col w-full gap-4'>
         {
@@ -32,7 +32,7 @@ const WorkExperience = () => {
                 return <div className='flex gap-5 entry_animation' key={company.id} onClick={()=>handleClick(company.id)}>
                             <img className='w-12 h-12 rounded-full object-contain' src={company.logoPng} alt="" />
                             <div className='w-full flex flex-col gap-3'>
-                                <div className='flex group justify-between items-center cursor-pointer w-full'> 
+                                <div className='flex group justify-between flex-col  md:flex-row md:items-center cursor-pointer w-full'> 
                                     <div className='flex flex-col '>
                                         <div className='text-xl flex items-center gap-1'>
                                             <h3>{company.name} </h3>

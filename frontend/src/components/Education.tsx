@@ -39,7 +39,7 @@ const Education = () => {
                 return <a href={o.url} className='flex gap-5 entry_animation' key={o.id}>
                             <img className='w-12 h-12 rounded-full object-cover' src={o.logoPng} alt="" />
                             <div className='w-full flex flex-col gap-3'>
-                                <div className='flex group justify-between items-center cursor-pointer w-full'> 
+                                <div className='flex group md:flex-row flex-col justify-between md:items-center cursor-pointer w-full'> 
                                     <div className='flex flex-col '>
                                         <div className='text-xl flex items-center gap-1'>
                                             <h3>{o.name} </h3>

@@ -63,7 +63,7 @@ const Navbar = () => {
           left-1/2 -translate-x-1/2 bottom-[-140px] 
           transition-all duration-300 
           flex flex-col items-center 
-          backdrop-blur-lg bg-white/5 text-white 
+          backdrop-blur-xl bg-black text-white 
           rounded-lg pt-1 whiteShadow md:hidden`}>
           
           {['About Me', 'Projects', 'Experiences'].map((item, index) => (
