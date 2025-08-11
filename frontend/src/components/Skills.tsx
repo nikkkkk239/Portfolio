@@ -16,7 +16,8 @@ const skills = [
   { title: "TailwindCss", description: "A utility-first CSS framework for building modern, custom UI designs quickly." },
   { title: "MySQL", description: "A widely-used open-source relational database for storing structured data securely." },
   { title: "TypeScript", description: "A typed superset of JavaScript that improves code quality with static type checking." },
-  { title: "Computer Networks", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." }
+  { title: "Computer Networks", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." },
+  { title: "Git", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." }
 ];
 
 const Skills = () => {
@@ -28,36 +29,6 @@ const Skills = () => {
     description: "",
   });
 
-  const CARD_WIDTH = 200;
-  const CARD_HEIGHT = 140;
-
-  const handleMouseEnter = (e: any, description: string) => {
-    if (!containerRef.current) return;
-
-    const rect = e.currentTarget.getBoundingClientRect();
-    const containerRect = containerRef.current.getBoundingClientRect();
-
-    let left = rect.left - containerRect.left + rect.width - 50;
-    let top = rect.top - containerRect.top + rect.height + 10;
-
-    const maxLeft = containerRect.width - CARD_WIDTH - 10;
-    const maxTop = containerRect.height - CARD_HEIGHT - 10;
-
-    
-    left = Math.min(left, maxLeft);
-    top = Math.min(top, maxTop);
-
-    setHoverData({
-      visible: true,
-      top,
-      left,
-      description,
-    });
-  };
-
-  const handleMouseLeave = () => {
-    setHoverData(prev => ({ ...prev, visible: false }));
-  };
 
   return (
     <div className="flex flex-col w-full text-white items-center md:items-start justify-between gap-6 px-4 py-3 relative">
@@ -65,32 +36,19 @@ const Skills = () => {
 
       <div
         ref={containerRef}
-        className="relative w-full flex flex-wrap gap-4 overflow-visible z-0"
+        className="relative w-full flex flex-wrap gap-3 overflow-visible z-0"
       >
         {skills.map((skill, i) => (
           <div
             key={i}
-            className="relative bg-white px-3 py-1.5 rounded-lg text-black font-semibold cursor-pointer z-10"
-            onMouseEnter={(e) => handleMouseEnter(e, skill.description)}
-            onMouseLeave={handleMouseLeave}
+            className="relative bg-white px-3 hover:bg-black hover:text-white border-2 border-white/30 transition-all duration-200 py-1.5 rounded-lg text-black font-semibold z-10"
           >
             {skill.title}
           </div>
         ))}
 
         {/* Tooltip card */}
-        <div
-          className={`absolute transition-all duration-300 ease-in-out pointer-events-none z-50`}
-          style={{
-            top: hoverData.top,
-            left: hoverData.left,
-            visibility: hoverData.visible ? 'visible' : 'hidden',
-          }}
-        >
-          <div className="w-[200px] h-[140px] bg-black text-white px-4 py-4 rounded-lg flex items-center justify-center text-center text-sm border border-white/30 shadow-xl shadow-white/20 shadow-lg">
-            {hoverData.description}
-          </div>
-        </div>
+        
       </div>
     </div>
   );

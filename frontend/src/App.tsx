@@ -9,6 +9,7 @@ import { VscHome,VscAccount , VscArrowUp, VscMail } from 'react-icons/vsc';
 import WorkExperience from './components/WorkExperience';
 import Education from './components/Education';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 
   const items = [
@@ -52,6 +53,7 @@ function App() {
             <WorkExperience/>
             <Education/>
             <Skills/>
+            <Projects/>
           </div>
       </div>
       
