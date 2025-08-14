@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useRef } from "react";
 
 const skills = [
   { title: "CPP", description: "A powerful language for system programming, competitive coding, and building high-performance applications." },
@@ -22,12 +22,6 @@ const skills = [
 
 const Skills = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [hoverData, setHoverData] = useState({
-    visible: false,
-    top: 0,
-    left: 0,
-    description: "",
-  });
 
 
   return (
@@ -46,8 +40,6 @@ const Skills = () => {
             {skill.title}
           </div>
         ))}
-
-        {/* Tooltip card */}
         
       </div>
     </div>

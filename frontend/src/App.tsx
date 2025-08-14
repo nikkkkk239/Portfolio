@@ -1,17 +1,17 @@
-import { useState } from 'react'
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import './App.css'
 import Particles from './components/Dot';
 import Dock from './components/Dock';
 import About from './components/About';
-import { VscHome,VscAccount , VscArrowUp, VscMail } from 'react-icons/vsc';
+import {VscArrowUp } from 'react-icons/vsc';
 import WorkExperience from './components/WorkExperience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import { FaCode, FaLaptopCode, FaTools, FaCogs, FaKeyboard } from "react-icons/fa";
+import { FaCode} from "react-icons/fa";
 import { FaGraduationCap,FaProjectDiagram  } from "react-icons/fa";
 
 

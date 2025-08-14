@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import { BsGithub } from 'react-icons/bs';
 
 interface projectParam{

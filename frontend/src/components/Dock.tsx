@@ -11,7 +11,6 @@ import React, {
   Children,
   cloneElement,
   useEffect,
-  useMemo,
   useRef,
   useState,
 } from "react";
@@ -133,7 +132,7 @@ function DockLabel({ children, className = "", ...rest }: DockLabelProps) {
   );
 }
 
-function DockIcon({ children, className = "" }: DockIconProps) {
+function DockIcon({ children, className = "" }: DockItemProps) {
   return (
     <div className={`flex text-white items-center justify-center ${className}`}>
       {children}

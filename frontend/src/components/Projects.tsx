@@ -1,6 +1,3 @@
-import { button } from 'framer-motion/client'
-import React from 'react'
-import { BsGithub } from 'react-icons/bs'
 import ProjectCard from './ProjectCards'
 
 const Projects = () => {

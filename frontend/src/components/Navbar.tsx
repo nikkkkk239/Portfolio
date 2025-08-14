@@ -1,5 +1,4 @@
 import React, { useState, useRef ,useEffect} from 'react';
-import { VscArrowDown } from 'react-icons/vsc';
 import { HiChevronDown } from 'react-icons/hi';
 
 const Navbar = () => {
