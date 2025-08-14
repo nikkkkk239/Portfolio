@@ -24,7 +24,7 @@ const WorkExperience = () => {
         setShowDetails(id);
     }
   return (
-     <div className="flex flex-col w-full text-white items-center md:items-start justify-between gap-6 px-4 py-3">
+     <div className="flex flex-col w-full text-white items-center md:items-start justify-between gap-6 px-4 py-8">
       <h1 className='text-3xl font-medium entry_animation'>Work Experience</h1>
       <div className='flex flex-col w-full gap-4'>
         {

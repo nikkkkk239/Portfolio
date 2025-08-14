@@ -66,12 +66,13 @@ const Navbar = () => {
           backdrop-blur-xl bg-black text-white 
           rounded-lg pt-1 whiteShadow md:hidden`}>
           
-          {['About Me', 'Projects', 'Experiences'].map((item, index) => (
+          {['Educations', 'Skills', 'Projects'].map((item, index) => (
             <p
               key={index} 
               className="px-4 py-2 cursor-pointer transition-transform hover:-translate-y-1 rounded-md duration-200"
             >
-              {item}
+              <a href={`#${item}`}>{item}</a>
+              
             </p>
           ))}
         </div>
@@ -96,19 +97,21 @@ const Navbar = () => {
           />
 
           {/* Menu Items */}
-          {['About Me', 'Projects', 'Experiences'].map((item, index) => (
+          {['Educations', 'Skills', 'Projects'].map((item, index) => (
             <li
               key={index}
               onMouseEnter={handleHover}
               className="px-4 py-1  cursor-pointer rounded-md transition-colors duration-200"
             >
-              {item}
+              <a href={`#${item}`}>{item}</a>
+              
             </li>
           ))}
         </ul>
 
-        <button className="hover:translate-y-[-5px] transition-all duration-150 cursor-pointer hover:font-bold">
-          Hire Me
+        <button className="hover:translate-y-[-5px] transition-all duration-150 cursor-pointer hover:font-bold" >
+          <a href="#contact">Contact</a>
+          
         </button>
       </div>
     </div>

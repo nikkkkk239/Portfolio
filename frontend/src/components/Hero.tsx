@@ -4,9 +4,6 @@ import { LiaGithub, LiaInstagram, LiaLinkedin, LiaTwitter } from 'react-icons/li
 import StarBorder from '../components/StarBorder'
   
 
-
-  
-
 const Hero = () => {
 
   return (
@@ -50,7 +47,7 @@ const Hero = () => {
         />
       </div> */}
       <TiltedCard
-  imageSrc="profile.jpeg"
+  imageSrc="profile2.jpeg"
   altText="Nikhil Panday - A Hero"
   captionText="👨‍💻"
   containerHeight="280px"

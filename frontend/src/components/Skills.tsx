@@ -31,7 +31,7 @@ const Skills = () => {
 
 
   return (
-    <div className="flex flex-col w-full text-white items-center md:items-start justify-between gap-6 px-4 py-3 relative">
+    <div id="Skills" className="flex flex-col w-full text-white items-center md:items-start justify-between gap-6 px-4 py-9 relative">
       <h1 className="text-3xl font-medium">Skills</h1>
 
       <div
