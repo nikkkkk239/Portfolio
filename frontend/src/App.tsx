@@ -16,9 +16,9 @@ import { FaGraduationCap,FaProjectDiagram  } from "react-icons/fa";
 
 
   const items = [
-    { icon: <FaGraduationCap size={18} />, label: 'Education', onClick: () => window.scrollTo({top:640 , behavior:"smooth"}) },
-    { icon: <FaCode size={18} />, label: 'Skills', onClick: () => alert('Skills!') },
-    { icon: <FaProjectDiagram size={18} />, label: 'Projects', onClick: () => alert('Contact!') },
+    { icon: <FaGraduationCap size={18} />, label: 'Education', onClick: () => window.scrollTo({top:890 , behavior:"smooth"}) },
+    { icon: <FaCode size={18} />, label: 'Skills', onClick: () => window.scrollTo({top:1190 , behavior:"smooth"}) },
+    { icon: <FaProjectDiagram size={18} />, label: 'Projects', onClick: () => window.scrollTo({top:1480 , behavior:"smooth"}) },
     { icon: <VscArrowUp size={18} />, label: 'Back To Top', onClick: () => window.scrollTo({top:0 , behavior:"smooth"}) },
   ];
 
