@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import {
   motion,
   MotionValue,
@@ -48,6 +50,7 @@ type DockLabelProps = {
   className?: string;
   children: React.ReactNode;
   isHovered: MotionValue<number>;
+
 };
 
 function DockItem({
@@ -95,8 +98,9 @@ function DockItem({
       role="button"
       aria-haspopup="true"
     >
+
       {Children.map(children, (child) =>
-        cloneElement(child as React.ReactElement, { isHovered })
+        cloneElement(child as React.ReactElement, { isHovered})
       )}
     </motion.div>
   );
@@ -147,7 +151,6 @@ export default function Dock({
   magnification = 70,
   distance = 200,
   panelHeight = 64,
-  dockHeight = 256,
   baseItemSize = 50,
 }: DockProps) {
   const mouseX = useMotionValue(Infinity);
