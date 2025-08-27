@@ -11,7 +11,8 @@ const Hero = () => {
       {/* Text Section */}
       <div className="flex flex-col text-center md:text-left gap-4 md:max-w-[60%]">
         <h1 className="text-white entry_animation font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-          Hi, I'm Nikhil 👋🏼
+          Hi, I'm Nikhil <span className="animate-wave ">👋🏼</span>
+          
         </h1>
         <p className="text-white entry_animation text-base sm:text-lg md:text-xl">
           Software Engineer. I love building things and helping people. Very active on LinkedIn.

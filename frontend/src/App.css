@@ -57,5 +57,18 @@ body {
 .perspective {
   perspective: 1000px;
 }
+@keyframes wave {
+  0%{
+    transform: rotate(30deg);
+  }
+  100%{
+    transform: rotate(0deg);
 
+  }
+}
 
+.animate-wave{
+  display: inline-block; /* important so transform works */
+  transform-origin: 70% 70%; /* makes it rotate like a hand */
+  animation: wave 2s infinite alternate;
+}
