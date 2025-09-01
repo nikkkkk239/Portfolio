@@ -17,7 +17,9 @@ const skills = [
   { title: "MySQL", description: "A widely-used open-source relational database for storing structured data securely." },
   { title: "TypeScript", description: "A typed superset of JavaScript that improves code quality with static type checking." },
   { title: "Computer Networks", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." },
-  { title: "Git", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." }
+  { title: "Git", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." },
+  { title: "Redis", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." },
+  { title: "Linux", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." }
 ];
 
 const Skills = () => {
