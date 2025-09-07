@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-import { BsGithub } from 'react-icons/bs';
+import { BsGithub, BsGlobe } from 'react-icons/bs';
 
 interface projectParam{
     imgs:Array<string>;
@@ -33,7 +33,7 @@ const ProjectCard = ( {project}  : {project : projectParam}) => {
             key={idx}
             src={img}
             alt={project.name}
-            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${idx === currentImgIndex ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute border-b-1 border-white/30 top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${idx === currentImgIndex ? 'opacity-100' : 'opacity-0'}`}
           />
         ))}
       </div>
@@ -47,8 +47,13 @@ const ProjectCard = ( {project}  : {project : projectParam}) => {
             <p className='bg-white/20 p-1.5 text-sm rounded text-white' key={j}>{lan}</p>
           ))}
         </div>
-        <div className='flex gap-5 mt-2'>
-          {project.website && <button>{project.website}</button>}
+        <div className='flex gap-3 mt-2'>
+          {project.website && <a
+            className='bg-white hover:bg-white/80 flex items-center gap-2 p-1 px-2 text-sm rounded-full text-black'
+            href={project.website}
+          >
+            <BsGlobe/> Visit
+          </a>}
           <a
             className='bg-white hover:bg-white/80 flex items-center gap-2 p-1 px-2 text-sm rounded-full text-black'
             href={project.source}

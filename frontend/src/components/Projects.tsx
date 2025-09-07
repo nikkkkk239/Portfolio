@@ -16,6 +16,17 @@ const Projects = () => {
       source : "https://github.com/nikkkkk239/vscode-ai-chat-assistant/"
     },
     {
+      imgs:["know1.png","know2.png","know3.png","know4.png","know5.png"],
+      name : "AI Powered Collabrative Knowledge Hub",
+      date:"Sep 2025",
+      description:`AI-Powered Collaborative Knowledge Hub is a smart platform for creating, organizing, and collaborating on knowledge in real-time, with AI-driven editing, summarization, and collaboration tools.`,
+      languages : [
+        "TypeScript" , "ReactJs" , "Redis" , "Vite" ,"TailwindCss","React Quill","Socket.io","Node.js" , "Express.js","MongoDB","Zustand","JWT-auth","Git","Vercel" ,"Render"
+      ],
+      website:"https://ai-powered-collaborative-knowledge.vercel.app/",
+      source : "https://github.com/nikkkkk239/AI-Powered-Collaborative-Knowledge-Hub"
+    },
+    {
       imgs:["code1.png","code2.png","code3.png","code4.png"],
       name : "CodeGether",
       date:"Jan 2025",
@@ -38,17 +49,17 @@ const Projects = () => {
       website:null,
       source:"https://github.com/nikkkkk239/chat_app"
     }
-    ,{
-      name : "ClearHire",
-      imgs:["company1.png","company2.png","company3.png"],
-      date:"June 2025",
-      description:`ClearHire - A web Application which allow companies to track their employees and will not allow employees to work at multiple companies.`,
-      languages:[
-        "Javascript" ,"Typescript" , "ReactJs" , "Socket.io" , "MongoDb" , "NodeJs" ,"Express", "Zustand" ,"Axios","JWT"
-      ],
-      website:null,
-      source:"https://github.com/nikkkkk239/company"
-    }
+    // ,{
+    //   name : "ClearHire",
+    //   imgs:["company1.png","company2.png","company3.png"],
+    //   date:"June 2025",
+    //   description:`ClearHire - A web Application which allow companies to track their employees and will not allow employees to work at multiple companies.`,
+    //   languages:[
+    //     "Javascript" ,"Typescript" , "ReactJs" , "Socket.io" , "MongoDb" , "NodeJs" ,"Express", "Zustand" ,"Axios","JWT"
+    //   ],
+    //   website:null,
+    //   source:"https://github.com/nikkkkk239/company"
+    // }
 
 
   ]
