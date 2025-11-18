@@ -13,6 +13,14 @@ const WorkExperience = () => {
             timeLine : "Jan 2025 - Apr 2025",
             details : "Builded multiple websites related to AI tools which includes Script Generator, Image Background Remover, Study Guide and many more. Used to get tasks to build complete Web and have worked with figma along with it. Also Got knowledge related to AWS backend Server API's. Most of the work was related to Frontend side. Got deeper knowledge of Javascript behaviour."
         },
+        {
+            id : 2,
+            name : "AppYard",
+            role : "React Developer",
+            logoPng : "appyard.png",
+            timeLine : "Sep 2025 - Oct 2025",
+            details : "Builded multiple websites and Applications for clients which includes Daily Uniform, Tuflift, Argha Insights and many more. Used to get tasks to build complete Web and Mobile based Applications, and have worked with figma along with it. Also Got knowledge related to Node's Server. Initially most projects were build on the based of frontend communicating to firebase directly, later we used to scale it by adding a Node.js server. Got deeper knowledge of React.js/React Native behaviour."
+        },
         
     ]
 

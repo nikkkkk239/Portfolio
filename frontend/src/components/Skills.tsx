@@ -19,7 +19,7 @@ const skills = [
   { title: "Computer Networks", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." },
   { title: "Git", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." },
   { title: "Redis", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." },
-  { title: "Linux", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." }
+  { title: "Linux", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." },{ title: "React Native", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." },{ title: "Docker", description: "Knowledge of protocols, IP addressing, routing, and how computers communicate over networks." }
 ];
 
 const Skills = () => {
