@@ -46,7 +46,7 @@ const Projects = () => {
       languages:[
         "Javascript" , "ReactJs" , "Socket.io" , "MongoDb" , "NodeJs" ,"Express", "Zustand" ,"Axios","JWT"
       ],
-      website:null,
+      website:"https://chat-app-1clh.vercel.app",
       source:"https://github.com/nikkkkk239/chat_app"
     }
     // ,{
